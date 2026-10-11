@@ -4,6 +4,8 @@
          <title> Control de asistencias</title>
  <link rel="stylesheet" href="styles.css">
 
+ <!-- AÑADIDO: librería para generar códigos QR -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
     </head>
     <body>
@@ -18,26 +20,31 @@
 <div class="card">
     <h2>Registrar estudiante</h2>
 
-    <form>
+    <!-- AÑADIDO: id="form-registro" -->
+    <form id="form-registro">
         <label>Nombre:</label>
 
-        <input type="text">
+        <!-- AÑADIDO: id="nombre" -->
+        <input type="text" id="nombre">
 
         <br><br>
 
         <label>Apellido:</label>
 
-        <input type="text">
+        <!-- AÑADIDO: id="apellido" -->
+        <input type="text" id="apellido">
 
         <br><br>
 
         <label>Código:</label>
 
-        <input type="text">
+        <!-- AÑADIDO: id="codigo" -->
+        <input type="text" id="codigo">
 
         <br><br>
 
-        
+        <!-- AÑADIDO: espacio para mensajes de error/éxito -->
+        <p id="mensaje"></p>
 
         <br><br>
 
@@ -50,7 +57,8 @@
 
     <h2>Estudiantes registrados</h2>
 
-    <table border="1">
+    <!-- AÑADIDO: id="tabla-estudiantes" -->
+    <table border="1" id="tabla-estudiantes">
 
         <tr>
 
@@ -60,7 +68,8 @@
 
             <th>Apellido</th>
 
-         
+            <!-- AÑADIDO: columna del QR -->
+            <th>QR</th>
 
         </tr>
 
@@ -72,7 +81,8 @@
 
             <td>Pérez</td>
 
-            
+            <!-- AÑADIDO: celda donde se dibuja el QR de Juan -->
+            <td></td>
 
         </tr>
 
@@ -104,6 +114,9 @@
             </tr>
             </table>
           </div>
-         
+
+    <!-- AÑADIDO: archivo con la lógica (QR y validación de código único) -->
+    <script src="js/app.js"></script>
+
     </body>
 </html>
