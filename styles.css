@@ -27,3 +27,6 @@ p {
     max-width: 900px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
+
+.error { color: #c0392b; font-weight: bold; }
+.ok { color: #27ae60; font-weight: bold; }
